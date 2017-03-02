@@ -1,0 +1,35 @@
+citHeader("To cite CDVineCopulaConditional in publications use:")
+
+
+citEntry(entry = "Manual",
+title = "CDVineCopulaConditional: Sampling from Conditional C- and D-Vine Copulas",
+    author = as.person("Emanuele Bevacqua"),
+    year = "2017",
+    note = "R package version 0.1.0",
+
+  textVersion  =
+  paste("Emanuele Bevacqua (2017). CDVineCopulaConditional: Sampling from Conditional C- and D-Vine Copulas. 
+  R package version 0.1.0")
+)
+
+
+
+
+citEntry(entry = "Article",
+  title        = "Multivariate Statistical Modelling of Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna",
+  author       = personList(as.person("Emanuele Bevacqua"),
+  as.person("Douglas Maraun"),
+  as.person("Ingrid Hobaek Haff"),
+  as.person("Martin Widmann"),
+  as.person("Mathieu Vrac")),
+  journal      = "Hydrology and Earth System Science Discussion",
+  year         = "2017",
+  doi          = "10.5194/hess-2016-652",
+  url          = "http://www.hydrol-earth-syst-sci-discuss.net/hess-2016-652/hess-2016-652.pdf",
+
+  textVersion  = 
+  paste("Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate Statistical Modelling of 
+  Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna, Hydrol. Earth Syst. Sci. Discuss., 
+  doi:10.5194/hess-2016-652, in review, 2017.")
+)
+

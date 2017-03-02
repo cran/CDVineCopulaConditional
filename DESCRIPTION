@@ -1,0 +1,30 @@
+Package: CDVineCopulaConditional
+Type: Package
+Version: 0.1.0
+Date: 2017-03-01
+Title: Sampling from Conditional C- and D-Vine Copulas
+Description: Provides tools for sampling from a conditional copula density decomposed via 
+     Pair-Copula Constructions as C- or D- vine. Here, the vines which can be used for such 
+     sampling are those which sample as first the conditioning variables (when following the 
+     sampling algorithms shown in Aas et al. (2009) <DOI:10.1016/j.insmatheco.2007.02.001>). 
+     The used sampling algorithm is presented and discussed in Bevacqua et al. (2017) 
+     <DOI:10.5194/hess-2016-652>, and it is a modified version of that from Aas et al. (2009) 
+     <DOI:10.1016/j.insmatheco.2007.02.001>. A function is available to select the best vine 
+     (based on information criteria) among those which allow for such conditional sampling. 
+     The package includes a function to compare scatterplot matrices and pair-dependencies of 
+     two multivariate datasets.
+Authors@R: person("Emanuele", "Bevacqua", role = c("aut", "cre"),
+                     email = "emanuele.bevacqua@uni-graz.at")
+Author: Emanuele Bevacqua [aut, cre]
+Maintainer: Emanuele Bevacqua <emanuele.bevacqua@uni-graz.at>
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: true
+Imports: combinat, graphics, stats, VineCopula
+RoxygenNote: 5.0.1
+Suggests: testthat
+Depends: R (>= 2.10)
+NeedsCompilation: no
+Packaged: 2017-03-02 16:23:57 UTC; emanuele
+Repository: CRAN
+Date/Publication: 2017-03-02 17:56:57
