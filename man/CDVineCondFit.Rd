@@ -211,13 +211,18 @@ RVM
 Emanuele Bevacqua
 }
 \references{
-Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate Statistical Modelling of Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna, Hydrol. Earth Syst. Sci. Discuss., doi:10.5194/hess-2016-652, in review, 2017.
+Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate statistical modelling of compound events via pair-copula constructions: analysis of floods in Ravenna (Italy), 
+Hydrol. Earth Syst. Sci., 21, 2701-2723, https://doi.org/10.5194/hess-21-2701-2017, 2017.
+\href{https://www.researchgate.net/publication/317414374_Multivariate_statistical_modelling_of_compound_events_via_pair-copula_constructions_Analysis_of_floods_in_Ravenna_Italy}{[link]} 
+\href{https://www.hydrol-earth-syst-sci.net/21/2701/2017/hess-21-2701-2017.html}{[link]} 
 
-Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance: Mathematics and Economics, 44(2), 182-198, doi:10.1016/j.insmatheco.2007.02.001, 2009.
+Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance: 
+Mathematics and Economics, 44(2), 182-198, <doi:10.1016/j.insmatheco.2007.02.001>, 2009.
+\href{http://www.sciencedirect.com/science/article/pii/S0167668707000194}{[link]} 
 
 Ulf Schepsmeier, Jakob Stoeber, Eike Christian Brechmann, Benedikt Graeler, Thomas 
 Nagler and Tobias Erhardt (2017). VineCopula: Statistical Inference of Vine Copulas. R 
-package version 2.1.1. https://CRAN.R-project.org/package=VineCopula.
+package version 2.1.1. \href{https://CRAN.R-project.org/package=VineCopula}{[link]}
 }
 \seealso{
 \code{\link{CDVineCondSim}}, \code{\link{CDVineCondRank}}

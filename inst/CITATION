@@ -5,7 +5,8 @@ citEntry(entry = "Manual",
 title = "CDVineCopulaConditional: Sampling from Conditional C- and D-Vine Copulas",
     author = as.person("Emanuele Bevacqua"),
     year = "2017",
-    note = "R package version 0.1.0",
+    note = "R package version 0.1.0",,
+    url = "https://CRAN.R-project.org/package=CDVineCopulaConditional",
 
   textVersion  =
   paste("Emanuele Bevacqua (2017). CDVineCopulaConditional: Sampling from Conditional C- and D-Vine Copulas. 

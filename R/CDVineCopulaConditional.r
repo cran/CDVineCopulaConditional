@@ -1,6 +1,5 @@
 
 
-
 #' Random dataset from a given vine copula model
 #' @description A random dataset simulated from a given 5-dimensional vine copula model. 
 #' 
@@ -153,16 +152,18 @@
 #' 
 #' @author Emanuele Bevacqua
 #'
-#' @references  Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate Statistical Modelling of
-#' Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna, Hydrol. Earth Syst. Sci.
-#' Discuss., doi:10.5194/hess-2016-652, in review, 2017.
+#' @references Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate statistical modelling of compound events via pair-copula constructions: analysis of floods in Ravenna (Italy), 
+#' Hydrol. Earth Syst. Sci., 21, 2701-2723, https://doi.org/10.5194/hess-21-2701-2017, 2017.
+#' \href{https://www.researchgate.net/publication/317414374_Multivariate_statistical_modelling_of_compound_events_via_pair-copula_constructions_Analysis_of_floods_in_Ravenna_Italy}{[link]} 
+#' \href{https://www.hydrol-earth-syst-sci.net/21/2701/2017/hess-21-2701-2017.html}{[link]} 
 #'
 #' Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance:
-#' Mathematics and Economics, 44(2), 182-198, doi:10.1016/j.insmatheco.2007.02.001, 2009.
+#' Mathematics and Economics, 44(2), 182-198, <doi:10.1016/j.insmatheco.2007.02.001>, 2009. 
+#' \href{http://www.sciencedirect.com/science/article/pii/S0167668707000194}{[link]} 
 #'
 #' Ulf Schepsmeier, Jakob Stoeber, Eike Christian Brechmann, Benedikt Graeler, Thomas 
 #' Nagler and Tobias Erhardt (2017). VineCopula: Statistical Inference of Vine Copulas. R 
-#' package version 2.1.1. https://CRAN.R-project.org/package=VineCopula.
+#' package version 2.1.1. \href{https://CRAN.R-project.org/package=VineCopula}{[link]}
 #' 
 #' @seealso \code{\link{CDVineCondFit}}
 #' @import VineCopula
@@ -174,7 +175,16 @@ CDVineCondSim <- function(RVM,Condition,N)
   {
     return(DVineCondSim(RVM,Condition,N))
   }
-  else if(RVM$Matrix[d,1]!=RVM$Matrix[d,2])
+  if(is.matrix(Condition))
+     {
+       if(dim(Condition)[2]==d)
+         {
+           print("Please, provide a number of conditioning variables smaller than d")
+         }
+      }
+  
+  
+  if(RVM$Matrix[d,1]!=RVM$Matrix[d,2])
   {
     return(DVineCondSim(RVM,Condition,N))
   }
@@ -371,16 +381,18 @@ CDVineCondSim <- function(RVM,Condition,N)
 #' 
 #' @author Emanuele Bevacqua
 #' 
-#' @references  Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate Statistical
-#' Modelling of Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna, Hydrol. Earth Syst. Sci.
-#' Discuss., doi:10.5194/hess-2016-652, in review, 2017.
-#'
+#' @references Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate statistical modelling of compound events via pair-copula constructions: analysis of floods in Ravenna (Italy), 
+#' Hydrol. Earth Syst. Sci., 21, 2701-2723, https://doi.org/10.5194/hess-21-2701-2017, 2017.
+#' \href{https://www.researchgate.net/publication/317414374_Multivariate_statistical_modelling_of_compound_events_via_pair-copula_constructions_Analysis_of_floods_in_Ravenna_Italy}{[link]} 
+#' \href{https://www.hydrol-earth-syst-sci.net/21/2701/2017/hess-21-2701-2017.html}{[link]} 
+#' 
 #' Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance:
-#' Mathematics and Economics, 44(2), 182-198, doi:10.1016/j.insmatheco.2007.02.001, 2009.
+#' Mathematics and Economics, 44(2), 182-198, <doi:10.1016/j.insmatheco.2007.02.001>, 2009. 
+#' \href{http://www.sciencedirect.com/science/article/pii/S0167668707000194}{[link]} 
 #' 
 #' Ulf Schepsmeier, Jakob Stoeber, Eike Christian Brechmann, Benedikt Graeler, Thomas 
 #' Nagler and Tobias Erhardt (2017). VineCopula: Statistical Inference of Vine Copulas. R 
-#' package version 2.1.1. https://CRAN.R-project.org/package=VineCopula.
+#' package version 2.1.1. \href{https://CRAN.R-project.org/package=VineCopula}{[link]}
 #' 
 #' @seealso \code{\link{CDVineCondFit}}
 #' @import VineCopula combinat
@@ -555,12 +567,14 @@ CDVineCondRank <- function(data,Nx,treecrit="AIC",selectioncrit="AIC",familyset 
 #' 
 #' @author Emanuele Bevacqua
 #' 
-#' @references  Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate Statistical
-#' Modelling of Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna, Hydrol. Earth Syst. Sci.
-#' Discuss., doi:10.5194/hess-2016-652, in review, 2017.
+#' @references Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate statistical modelling of compound events via pair-copula constructions: analysis of floods in Ravenna (Italy), 
+#' Hydrol. Earth Syst. Sci., 21, 2701-2723, https://doi.org/10.5194/hess-21-2701-2017, 2017.
+#' \href{https://www.researchgate.net/publication/317414374_Multivariate_statistical_modelling_of_compound_events_via_pair-copula_constructions_Analysis_of_floods_in_Ravenna_Italy}{[link]} 
+#' \href{https://www.hydrol-earth-syst-sci.net/21/2701/2017/hess-21-2701-2017.html}{[link]} 
 #'
 #' Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance:
-#' Mathematics and Economics, 44(2), 182-198, doi:10.1016/j.insmatheco.2007.02.001, 2009.
+#' Mathematics and Economics, 44(2), 182-198, <doi:10.1016/j.insmatheco.2007.02.001>, 2009. 
+#' \href{http://www.sciencedirect.com/science/article/pii/S0167668707000194}{[link]} 
 #' 
 #' @seealso \code{\link{CDVineCondFit}}
 #' @import VineCopula combinat
@@ -828,13 +842,18 @@ CDVineCondListMatrices <- function(data,Nx,type="CVine-DVine"){
 #'
 #' @author Emanuele Bevacqua
 #' 
-#' @references  Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate Statistical Modelling of Compound Events via Pair-Copula Constructions: Analysis of Floods in Ravenna, Hydrol. Earth Syst. Sci. Discuss., doi:10.5194/hess-2016-652, in review, 2017.
-#'
-#' Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance: Mathematics and Economics, 44(2), 182-198, doi:10.1016/j.insmatheco.2007.02.001, 2009.
+#' @references Bevacqua, E., Maraun, D., Hobaek Haff, I., Widmann, M., and Vrac, M.: Multivariate statistical modelling of compound events via pair-copula constructions: analysis of floods in Ravenna (Italy), 
+#' Hydrol. Earth Syst. Sci., 21, 2701-2723, https://doi.org/10.5194/hess-21-2701-2017, 2017.
+#' \href{https://www.researchgate.net/publication/317414374_Multivariate_statistical_modelling_of_compound_events_via_pair-copula_constructions_Analysis_of_floods_in_Ravenna_Italy}{[link]} 
+#' \href{https://www.hydrol-earth-syst-sci.net/21/2701/2017/hess-21-2701-2017.html}{[link]} 
+#' 
+#' Aas, K., Czado, C., Frigessi, A. and Bakken, H.: Pair-copula constructions of multiple dependence, Insurance: 
+#' Mathematics and Economics, 44(2), 182-198, <doi:10.1016/j.insmatheco.2007.02.001>, 2009.
+#' \href{http://www.sciencedirect.com/science/article/pii/S0167668707000194}{[link]} 
 #'
 #' Ulf Schepsmeier, Jakob Stoeber, Eike Christian Brechmann, Benedikt Graeler, Thomas 
 #' Nagler and Tobias Erhardt (2017). VineCopula: Statistical Inference of Vine Copulas. R 
-#' package version 2.1.1. https://CRAN.R-project.org/package=VineCopula.
+#' package version 2.1.1. \href{https://CRAN.R-project.org/package=VineCopula}{[link]}
 #' 
 #' @seealso \code{\link{CDVineCondSim}}, \code{\link{CDVineCondRank}}
 #' @export CDVineCondFit
@@ -1542,16 +1561,18 @@ DVineCondSim <- function(RVM,Condition,N)
 
 
 
-
-
-
-
 PossibleCDVine4Condition <- function(Nx,Ny,type){
   #this routine gives back the first level of all the possible vines that mathematically allow foor building a conditionated model
   x <- seq(1,(Ny+Nx),1)
   #in x the first variable has to be the x variables, the last the predictors
   Perm <- permn(x)
 
+  if(Nx==0)
+  {
+    Nx=Ny
+    Ny=0
+  }
+  
   GoodTree <- logical(length = factorial(length(x)))
   for(i in 1:factorial(length(x)))
   {
@@ -1586,7 +1607,7 @@ PossibleCDVine4Condition <- function(Nx,Ny,type){
   {
     bbb=MatrixGoodTree[,ncol(MatrixGoodTree):1]#inversion wih respect to Dvine!
     MatrixGoodTree=bbb
-    if(Ny!=1)#no duplications!
+    if(Ny!=1)# Ny!=1 -> no duplications!
     {
       aaa=MatrixGoodTree
       d=Nx+Ny
@@ -1605,6 +1626,11 @@ PossibleCDVine4Condition <- function(Nx,Ny,type){
   }
   if(type==2 | type=="DVine")
   {
+    if(Ny==0 | Nx==0)# if Ny==0 | Nx==0 there are duplications!
+    {
+      half=dim(MatrixGoodTree)[1]/2
+      MatrixGoodTree=MatrixGoodTree[1:half,]
+    }
     return(MatrixGoodTree)
   }
 }
